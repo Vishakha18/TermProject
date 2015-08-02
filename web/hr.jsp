@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Login Page</h1> 
- <center> <h2>Signup Details</h2>
+ <center> <h2>SignUp Details</h2>
  
 
  <form action="Hr" method="post">
