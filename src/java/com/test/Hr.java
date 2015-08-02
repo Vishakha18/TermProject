@@ -93,5 +93,35 @@ public class Hr extends HttpServlet {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} 
+                catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		       }else{
+		    	   response.sendRedirect("hr.jsp");
+		       }
+		       
+		       try {
+				PreparedStatement ps1=con.prepareStatement("select Percentage from Student where Percentage >60");
+			
+					ResultSet rs1=ps1.executeQuery();
+					while(rs1.next()) 
+					{ 
+	                  //  for()    
+					pw.println(rs1.getString(1));
+					
+
+								
+						
+					}
+		       }
+				 catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}   
+		       
+		
+	}
+
         }
         
