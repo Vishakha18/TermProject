@@ -47,5 +47,51 @@ public class Hr extends HttpServlet {
 		PrintWriter pw=null;
 		       String Username=request.getParameter("username");
 		       String Password=request.getParameter("password");
+        
+        if(Username.equals("hradmin")){
+		try {
+			pw=response.getWriter();
+			Class.forName("com.mysql.jdbc.Driver");
+                        String url="jdbc:mysql://ipro.lambton.on.ca/inventory";
+                        String username="products";
+                        String password="products";
+			con=DriverManager.getConnection(url,username,password);	
+			 ps=con.prepareStatement("select * from Student ");
+			ResultSet rs=ps.executeQuery();
+			pw.println("<html>");
+			
+			String d="<table width='500' border='1' cellspacing='0' cellpadding='0'>";
+			
+			pw.println(d); 
+			pw.println("<tr>");
+			pw.println("<th>"+"S.No."+"</th>"); 
+			pw.println("<th>"+"First Name"+"</th>"); 
+			pw.println("<th>"+"Last Name"+"</th>"); 
+			pw.println("<th>"+"Email Id"+"</th>"); 
+			pw.println("<th>"+"Qualification"+"</th>"); 
+			pw.println("<th>"+"Percentage"+"</th>"); 
+			pw.println("<th>"+"Mobile Number"+"</th>"); 
+			pw.println("<tr>");
+			while(rs.next()) 
+			{ 
+			pw.println("<td>"+rs.getString(1)+"</td>"); 
+			pw.println("<td>"+rs.getString(2)+"</td>"); 
+			pw.println("<td>"+rs.getString(3)+"</td>"); 
+			pw.println("<td>"+rs.getString(4)+"</td>"); 
+			pw.println("<td>"+rs.getString(5)+"</td>"); 
+			pw.println("<td>"+rs.getString(6)+"</td>"); 
+			pw.println("<td>"+rs.getString(7)+"</td>"); 
+			
+			pw.println("</tr>");
+			
+			//pw.println("<tr>");
+			} 
+			pw.println("</table></html>"); 
+			
+			
+		}catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
         }
-}
+        
