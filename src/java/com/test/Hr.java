@@ -53,9 +53,9 @@ public class Hr extends HttpServlet {
 			pw=response.getWriter();
 			Class.forName("com.mysql.jdbc.Driver");
                         String url="jdbc:mysql://localhost:3306/HR";
-                        String username="products";
-                        String password="products";
-			con=DriverManager.getConnection(url,"root","");	
+                        String username="root";
+                        String password="";
+			con=DriverManager.getConnection(url,username,password);	
 			 ps=con.prepareStatement("Select * from Student ");
 			ResultSet rs=ps.executeQuery();
 			pw.println("<html>");
