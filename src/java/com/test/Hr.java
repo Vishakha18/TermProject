@@ -52,11 +52,11 @@ public class Hr extends HttpServlet {
 		try {
 			pw=response.getWriter();
 			Class.forName("com.mysql.jdbc.Driver");
-                        String url="jdbc:mysql://ipro.lambton.on.ca/inventory";
+                        String url="jdbc:mysql://localhost:3306/HR";
                         String username="products";
                         String password="products";
-			con=DriverManager.getConnection(url,username,password);	
-			 ps=con.prepareStatement("select * from Student ");
+			con=DriverManager.getConnection(url,"root","");	
+			 ps=con.prepareStatement("Select * from Student ");
 			ResultSet rs=ps.executeQuery();
 			pw.println("<html>");
 			
