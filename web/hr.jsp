@@ -7,7 +7,7 @@
 <title>HR System</title>
 </head>
 <body>
-<h1>Login Page</h1> 
+    <h1 align="center">Login Page</h1><br> 
  <center> <h2>SignUp Details</h2>
  
 
