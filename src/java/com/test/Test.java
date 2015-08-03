@@ -43,42 +43,44 @@ public class Test extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-		System.out.println("dffb");
+	if(request.getParameter("pass").equals(request.getParameter("cpass"))){
+            	System.out.println("dffb");
 		String Fname=request.getParameter("name");
 		String Lname=request.getParameter("name1");
 		String Email=request.getParameter("email");
 		String Qualification=request.getParameter("edu");
-		String Percentage=request.getParameter("per");
-		String MobileNo =request.getParameter("mobile");
+		int Percentage=Integer.parseInt(request.getParameter("per"));
+		int MobileNo =Integer.parseInt(request.getParameter("mobile"));
+                	
 		
 	try {
-		PrintWriter pw=response.getWriter();
-		ResultSet rs=null;
-		Class.forName("com.mysql.jdbc.Driver");
-                String url="jdbc:mysql://ipro.lambton.on.ca/inventory";
-                String username="products";
-                String password="products";
-		Connection con=DriverManager.getConnection(url,username,password);
-		pw.write("Connection Established"+con);
-		
-		PreparedStatement ps=con.prepareStatement("insert into Student values(Student1.nextval,?,?,?,?,?,?)");
-		ps.setString(1,Fname);
+                //response.getWriter().println("Start");
+                MySQL sq=new MySQL();
+		Connection con=sq.getConnection();
+		PreparedStatement ps=con.prepareStatement("insert into Student (fname,lname,email,qualification,percentage,mobileno,password) values(?,?,?,?,?,?,?)");
+                //response.getWriter().println("After Query");
+                ps.setString(1,Fname);
 		ps.setString(2,Lname);
 		ps.setString(3,Email);
 		ps.setString(4,Qualification);
-		ps.setString(5,Percentage);
-		ps.setString(6,MobileNo);
-		rs=ps.executeQuery();
-			response.sendRedirect("Test.jsp");
-		
-	} catch (ClassNotFoundException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
+		ps.setInt(5,Percentage);
+		ps.setInt(6,MobileNo);
+                ps.setString(7,request.getParameter("pass"));
+                //response.getWriter().println("Before Exce");
+		ps.executeUpdate();
+                //response.getWriter().println("Query Executed");
+		//response.sendRedirect("Test.jsp");
+		request.getRequestDispatcher("Test.jsp").forward(request, response);
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
+                System.out.println(e.getMessage());
 	}
+        }else{
+            request.setAttribute("Invalid", "Password and Confirm Password mismatches");
+            request.getRequestDispatcher("Test1.jsp").forward(request,response);
+        }
+	
 		
 	}
 
