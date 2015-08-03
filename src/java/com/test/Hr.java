@@ -52,7 +52,7 @@ public class Hr extends HttpServlet {
 		try {
 			pw=response.getWriter();
 			Class.forName("com.mysql.jdbc.Driver");
-                        String url="jdbc:mysql://localhost:3306/HR";
+                        String url="jdbc:mysql://localhost:3306/hr";
                         String username="root";
                         String password="";
 			con=DriverManager.getConnection(url,username,password);	
