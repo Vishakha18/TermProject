@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Login Page</h1> 
+<h1 align="center">Login Page</h1> 
 
 <div align=right><a href="hr.jsp">HR Login</a></div>
 
@@ -16,10 +16,11 @@
   <form action="LoginCheck" method="post">
      <br/>First Name:<input type="text" name="username"><br>
      <br/>Password:<input type="password" name="password"><br>
-     <br/>Mobile No:<input type="text" name="mobile"><br> 
+     <br/>Mobile Number:<input type="text" name="mobilenumber"><br>
      <br/><input type="submit" value="Submit">
      &nbsp;<a href="Test1.jsp">Sign Up</a>
   </form> 
+     ${invalid}
  </center>
 </body>
 </html>
