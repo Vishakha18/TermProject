@@ -37,9 +37,9 @@
       <div class="form-group">
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
-     <br/>First Name:<input type="text" name="username"><br>
-     <br/>Password:<input type="password" name="password"><br>
-     <br/>Mobile Number:<input type="text" name="mobilenumber"><br>
+     <br/>First Name:<label for="username" style="color:red" align="center">*</label><input type="text" name="username"><br>
+     <br/>Password:<label for="password" style="color:red" align="center">*</label><input type="password" name="password"><br>
+     <br/>Mobile Number:<label for="mobilenumber" style="color:red" align="center">*</label><input type="text" name="mobilenumber"><br>
     <br/><input type="submit" value="Submit">  
                 </div>
             </div>
