@@ -44,19 +44,20 @@ ResultSet r=stmt.executeQuery();
 ResultSet rs=ps.executeQuery();
 if(rs.next())
 {
-out.println("<strong>You are Eligible for Interview</strong>");
+out.println("<strong>You are Eligible to apply for the following Jobs</strong>");
 out.println("<br><br><br>");
 while(r.next()){
     out.println("<br>");
     out.print("<strong>Job Title:</strong> " +r.getString("title")+"               ");
     out.println("<br>");
     out.println("<strong>Requirement:</strong> "+r.getString("requirement"));
+    out.println("<br>");
 }
 
 }
 else
 {
-    out.println("You are not eligible because yourPercentage is less than 60");
+    out.println("<strong>You Are Not Eligible Because Your Percentage Is Less Than 60</strong>");
 }
 %>
 </div>
