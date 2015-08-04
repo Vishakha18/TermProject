@@ -46,7 +46,6 @@
       </div>
   </form> 
     <div class="error">
-               
             <div class="well" style="color:red"> ${invalid}</div>
             
     </div>
