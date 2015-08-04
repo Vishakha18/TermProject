@@ -15,21 +15,18 @@
 <div data-role="navbar" class="hr">
                     <ul>
                         <li><a href="Test1.jsp" data-theme="a"  data-icon="home" data-transition="pop">Sign Up</a></li>
-                        <li><a href="Test.jsp" data-theme="f" data-icon="star" data-transition="pop">Login</a></li>
+                        <li><a href="Test.jsp" data-theme="f" data-icon="star" data-transition="pop">Candidate Login</a></li>
                         <li><a href="hr.jsp" data-theme="c" data-icon="grid" data-transition="pop">HR Login</a></li>
-                        <li><a href="Success.jsp" data-theme="d" data-icon="location" data-transition="pop">Success Login</a></li>
-                       
+                                              
                     </ul>
                 </div>
 
 </head>
 <body>
 
-<h1 align="center">Login Page</h1> 
-
-<div align=right><a href="hr.jsp">HR Login</a></div>
-
- <center> <h2>SignUp Details</h2> 
+<!--<div align=right><a href="hr.jsp">HR Login</a></div>
+--->
+<br><center> <h2>Login Here</h2> 
   <form action="LoginCheck" method="post">
      <br/>First Name:<input type="text" name="username"><br>
      <br/>Password:<input type="password" name="password"><br>
@@ -39,5 +36,8 @@
   </form> 
      ${invalid}
  </center>
+ <div data-role="footer">
+                <h2>&copy;2015 Vishakha</h2>
+            </div>
 </body>
 </html>
