@@ -44,7 +44,6 @@
                 </div>
             </div>
       </div>
-       &nbsp;<a href="Test1.jsp">Sign Up</a>
   </form> 
     <div class="error">
                
