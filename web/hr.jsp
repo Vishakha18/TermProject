@@ -18,21 +18,20 @@
                         <li><a href="Test1.jsp" data-theme="a"  data-icon="home" data-transition="pop">Sign Up</a></li>
                         <li><a href="Test.jsp" data-theme="f" data-icon="star" data-transition="pop">Login</a></li>
                         <li><a href="hr.jsp" data-theme="c" data-icon="grid" data-transition="pop">HR Login</a></li>
-                        <li><a href="Success.jsp" data-theme="d" data-icon="location" data-transition="pop">Success Login</a></li>
-                       
+                        
                     </ul>
                 </div>
 </head>
 <body>
-    <h1 align="center">Login Page</h1><br> 
- <center> <h2>SignUp Details</h2>
- 
+    <h1 align="center">HR Login Page</h1><br> 
 
  <form action="Hr" method="post">
      <br/>Username:<input type="text" name="username"><br>
      <br/>Password:<input type="password" name="password"><br>
      <br/><input type="submit" value="Submit">
    </form>
-
+ <div data-role="footer">
+                <h2>&copy;2015 Vishakha</h2>
+            </div>
 </body>
 </html>
