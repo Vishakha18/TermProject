@@ -16,10 +16,9 @@
                     <div class="navbar navbar-default">
                         <div class="navbar-header">
                             <ul class="nav nav-pills nav-justified">
-                                <li><a href="Test1.jsp" data-theme="a"  data-icon="home" data-transition="pop">Sign Up</a></li>
-                                <li><a href="Test.jsp" data-theme="f" data-icon="star" data-transition="pop">Login</a></li>
-                                <li><a href="hr.jsp" data-theme="c" data-icon="grid" data-transition="pop">HR Login</a></li>
-                        
+                                <li><a href="Test1.jsp" data-transition="pop">Sign Up</a></li>
+                                <li><a href="Test.jsp"  data-transition="pop">Login</a></li>
+                                <li><a href="hr.jsp"  data-transition="pop">HR Login</a></li>
                             </ul>
                         </div>
                     </div>
@@ -33,20 +32,19 @@
             <div class="row">
                 <div class="col-lg-2 col-sm-offset-1">
      <br/>Username:<label for="password" style="color:red" align="center">*</label>
-    <input
+    <input 
         type="text" name="username" >
      <br/>Password:<label for="password" style="color:red">*</label>
      <input type="password" name="password"><br>
-     <div class="row form-group">
-                <div class="col-lg-4 col-lg-offset-3">
-                    <br><input type="submit" value="Submit" />
+                 <br><input type="submit" value="Submit" />
                 </div>
             </div>
-     
+     </div>
    </form>
-   
-            
+   <div class="error">
+                <div class="well" style="color:red"> ${invalid}</div>
    </div>
+           
     
 </body>
 </html>
